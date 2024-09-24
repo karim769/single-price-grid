@@ -1,0 +1,154 @@
+
+:root
+{
+ /* Colors */
+
+ /* Primary */
+
+--Cyan: hsl(179, 62%, 43%);
+--Bright-Yellow: hsl(71, 73%, 54%);
+
+/* Neutral */
+
+--Light-Gray: hsl(204, 43%, 93%);
+--Grayish-Blue: hsl(218, 22%, 67%);
+
+/* font family Karla  */
+
+--font-family-Karla:'Karla';
+
+}
+
+*{
+
+    margin: 0;
+}
+
+h2{
+
+    color: var(--Cyan);
+}
+
+body{
+
+    font-family: var(--font-family-Karla);
+    background-color: var(--Light-Gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+main{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: var(--Light-Gray);
+    max-width: 95%;
+    margin: 5vh auto;
+    border-radius: 7px;
+    overflow: hidden;
+
+}
+
+main >div{
+
+    padding: 1.5em;
+}
+
+main >div:nth-of-type(1){
+
+    background-color: white;
+}
+
+main >div:nth-of-type(1) h3{
+
+    color: var(--Bright-Yellow);
+    margin: 1em auto;
+}
+
+
+main >div:nth-of-type(1) p{
+
+    line-height: 170%;
+
+}
+
+main >div:nth-of-type(2){
+
+    background-color: var(--Cyan);
+    color: white;
+}
+
+
+main >div:nth-of-type(2) div {
+
+    margin: 1em auto;
+}
+
+main >div:nth-of-type(2) div :first-child{
+
+    font-size: 1.5rem;
+}
+
+main >div:nth-of-type(2) div :last-child{
+
+    font-size: 0.8rem;
+    color: var(--Light-Gray);
+}
+
+button{
+
+    border: none;
+    width: 100%;
+    height: 3em;
+    border-radius: 6px;
+    background-color: var(--Bright-Yellow);
+    color: white;
+    margin-top: 2em;
+    cursor: pointer;
+
+}
+
+main >div:nth-of-type(3){
+
+    background-color: var(--Cyan);
+    color: white;
+    opacity: 0.7;
+}
+
+main >div:nth-of-type(3) p{
+
+
+    line-height: 130%;
+    width: 70%;
+    margin-top: 1em;
+
+}
+
+@media(min-width:40em){
+
+main{
+
+        max-width: 50%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "one one" " two three";
+}
+
+main >div:nth-of-type(1){
+
+    grid-area: one;
+}
+
+main >div:nth-of-type(2){
+
+    grid-area: two;
+}
+
+main >div:nth-of-type(3){
+
+    grid-area: three;
+}
+}
